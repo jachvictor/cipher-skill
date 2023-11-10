@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+// import reactLogo from "./assets/react.svg";
+// import viteLogo from "/vite.svg";
+import "./App.css";
+import { useLocation, useNavigate } from "react-router-dom";
+import { LandingPage } from "./pages";
+import { ImArrowLeft, ImArrowRight } from "react-icons/im";
+import { Footer, Navbar } from "./mainComponents";
+import Pageroute from "./routes/Pageroute";
+import Courseroute from "./routes/Courseroute";
+import Activityroute from "./routes/Activityroute";
 
 function App() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const path = location.pathname;
+  const [carry] = useState({
+    course: {
+      targe: "python tutorial",
+      title: "python crash course",
+      section1: {
+        header: "intro",
+        content: "loremshvc,gjvcgchvhavmcaecgcea,k",
+      },
+      section2: { header: "syntax", content: "wuvydmcgycv hgccxms " },
+    },
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {path !== "/" && (
+        <div className="float">
+          <div onClick={() => navigate(-1)}>
+            <ImArrowLeft size={30} className="icon1" />
+          </div>
+          <div onClick={() => navigate(+1)}>
+            <ImArrowRight size={30} className="icon1" />
+          </div>
+        </div>
+      )}
+      <Pageroute />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -1,0 +1,80 @@
+.about-us {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  height: auto;
+  margin-top: -0.5rem;
+  /* width: 90vw; */
+  background-color: white;
+}
+.about-container {
+  display: flex;
+  /* height: 40rem; */
+  width: 100%;
+  /* background-color: */
+}
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: blue; */
+  gap: 1rem;
+  width: 60%;
+  z-index: +2;
+}
+.information article {
+  display: flex;
+  flex-direction: column;
+  /* background-color: blue; */
+  gap: 1rem;
+  padding: 1rem;
+  /* width: 60%; */
+  /* z-index: +2; */
+}
+.about-img {
+  display: flex;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+}
+
+.image2 {
+  width: 90%;
+}
+.developer-contain {
+  /* background-color: rgb(14, 13, 13); */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1.5rem;
+  gap: 2rem;
+  width: 100%;
+}
+.dev-head {
+  /* background-color: rgb(242, 16, 16); */
+  /* width: 100%; */
+  margin-top: -0.5rem;
+  padding: 1rem;
+}
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: auto;
+    /* background-color: aqua; */
+    padding: 1rem 0;
+  }
+  .about-img {
+    /* height: 30rem; */
+    width: 100%;
+    /* margin-top: 10rem; */
+  }
+
+  .information {
+    width: 100%;
+  }
+}

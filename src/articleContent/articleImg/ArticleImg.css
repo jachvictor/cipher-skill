@@ -1,0 +1,29 @@
+.article-img {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+  /* height: ; */
+  /* background-color: aqua; */
+
+
+  
+}
+.back-light {
+  /* background-color: white; */
+  color: black;
+}
+.article-img img {
+  padding: 0;
+  /* width: 0%; */
+  /* height: 20rem; */
+}
+@media screen and (max-width:900px){
+
+  .article-img img{
+    width: 90%;
+  }
+}

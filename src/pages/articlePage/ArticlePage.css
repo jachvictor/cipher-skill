@@ -1,0 +1,22 @@
+.flex-img {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  /* margin-top: -1.5rem; */
+  /* gap: 2rem; */
+  /* width: 100%; */
+  font-size: large;
+  font-weight: bold;
+}
+.flex-light {
+  background-color: white;
+  color: black;
+}
+.course {
+  /* display: flex; */
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  /* flex-direction: column; */
+}

@@ -1,0 +1,15 @@
+.dev-contain{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: auto;
+    /* background-color: beige; */
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.dev-contain:hover{
+    border: 1px solid gray;
+}
+.devimg{
+    height: 20rem;
+}

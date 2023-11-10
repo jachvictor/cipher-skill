@@ -1,0 +1,31 @@
+.recommend-contain {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  overflow-y: auto;
+  overflow-x:hidden ;
+  height: 100vh;
+  width: 100%;
+  /* background-color: blue; */
+  /* padding: 1rem; */
+}
+/* .recommend-contain::-webkit-scrollbar{
+    outline: none;
+} */
+.recommend-contain::-webkit-scrollbar {
+  outline: none;
+  width: 1px;
+}
+
+.recommend-contain::-webkit-scrollbar-track {
+  background-color: white;
+}
+.recommend-contain::-webkit-scrollbar-thumb {
+  background-color: #03032c;
+}
+
+.recommend-contain::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px gray;
+  border-radius: 10px;
+}

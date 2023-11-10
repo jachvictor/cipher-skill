@@ -1,0 +1,40 @@
+.night {
+  background-color: #03032c;
+  color: white;
+}
+.section {
+  background-color: white;
+  color: #03032c;
+}
+.general {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* height: auto; */
+  /* width: fit-content; */
+  padding: 0.5rem;
+  /* padding-right: 2rem; */
+}
+
+.light-subhead {
+  /* background-color: #03032c; */
+  color:#03032c;
+  /* margin: 0 1rem; */
+  width: 30%;
+  /* padding: 0.5rem; */
+  border-radius: 1rem;
+  font-size:medium ;
+}
+.night-subhead {
+  /* background-color: white; */
+  color: white;
+  /* margin: 0 1rem; */
+  width: 30%;
+  /* padding: 0.5rem; */
+  border-radius: 1rem;
+  font-size:medium ;
+}
+.content {
+  display: flex;
+  align-items: center;
+}

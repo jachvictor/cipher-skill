@@ -1,0 +1,62 @@
+.night {
+    background-color: #03032c;
+    color: white;
+  }
+  .section {
+    background-color: white;
+    color: #03032c;
+  }
+  .general {
+    display: flex;
+    flex-direction: column;
+  /* align-items: center; */
+    /* height: auto; */
+    /* width: fit-content; */
+    /* padding: 1rem; */
+    /* padding-right: 2rem; */
+  }
+  
+  .light-head {
+    background-color: #03032c;
+    color: white;
+    /* margin: 0 1rem; */
+    padding: 0.2rem;
+    border-radius: 1rem;
+  }
+  .night-head {
+    background-color: white;
+    color: #03032c;
+    /* margin: 0 1rem; */
+    padding: 0.2rem;
+    border-radius: 1rem;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+  }
+  .table-contain{
+    /* width: 100%; */
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    margin: 1rem;
+    /* background-color: #03032c; */
+gap: 1rem;
+      border: 2px solid aqua;
+  }
+  .table-contain ul li{
+    display: flex;
+      cursor: pointer;
+      padding:0.2rem 1rem;
+      font-weight: bold;
+      /* gap: 8rem; */
+      /* background-color: aqua; */
+  }
+  .table-contain li:hover{
+      color: aqua;
+  }
+  .table-contain a{
+    text-decoration: inherit;
+    color: inherit;
+  }
+  

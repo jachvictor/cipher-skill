@@ -1,0 +1,41 @@
+.note-contain {
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  color: black;
+  /* gap: 2rem; */
+  background-color: white;
+}
+.note-contain h3 {
+  padding: 1rem;
+  background-color: white;
+  color: red;
+  width: auto;
+  /* margin-left: 1rem; */
+  border-radius: 1rem;
+}
+.note-contain p {
+  display: flex;
+  flex-wrap: wrap;
+}
+.dark-mode-h3 {
+  /* background-color: red; */
+  color: red;
+  padding: 1rem;
+  width: auto;
+  /* margin-left: 1rem; */
+  border-radius: 1rem;
+}
+.dark-mode {
+  gap: 2rem;
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  color: white;
+  /* background-color: #3f3f3f; */
+}
+@media screen and (max-width:500px) {
+  .note-contain{
+    flex-direction: column;
+  }
+}

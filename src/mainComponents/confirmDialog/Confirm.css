@@ -1,0 +1,52 @@
+.confirm-contain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 20rem;
+  /* background-color: aqua; */
+  background-color: white;
+  height: auto;
+  padding: 1rem 0;
+  border-radius: 2rem;
+}
+.confirm-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  /* background-color: blue; */
+}
+.hold-confirm-btn {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  /* background-color: brown; */
+}
+.yes button {
+  background-color: red;
+  color: white;
+}
+.no button {
+    background-color:green;
+    color: white;
+  }
+  .yes button:hover {
+    background-color: red;
+    color: white;
+  }
+  .hold-confirm {
+    z-index: +1;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10rem;
+  /* background-color: aqua; */
+  margin-top: 4rem;
+  background: rgb(0,0,0,0.6);
+}
