@@ -48,11 +48,11 @@
   text-decoration: none;
 }
 .select {
-  color: blueviolet;
-  border-bottom: 5px solid blueviolet;
+  color:#03032c;
+  border-bottom: 5px solid #03032c;
 }
 .navlink p {
-  color: blueviolet;
+  color: #03032c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,6 +68,11 @@
   /* justify-content: center; */
   /* align-items: center; */
   /* padding-right: 1rem; */
+}
+.current{
+  background-color: #03032c;
+  color: white;
+  border-radius: 1rem;
 }
 @media (max-width: 900px) {
   .icon {
@@ -102,6 +107,7 @@
   .navlogo {
     height: 4rem;
     width: 6rem;
+    margin-top: 0.6rem;
     /* will-change: filter; */
 
     border-radius: 1rem;

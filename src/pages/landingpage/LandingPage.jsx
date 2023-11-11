@@ -1,6 +1,5 @@
 import React from "react";
 import "./LandingPage.css";
-import logo from "../../assets/codeable.png";
 import { Info, Info2, Header } from "../../mainComponents";
 
 import offer from "../../assets/offer.png";
@@ -9,8 +8,6 @@ import us from "../../assets/programe.png";
 import { Link } from "react-router-dom";
 import {
   HiOutlineUserGroup,
-  HiOutlineShoppingBag,
-  HiOutlineHand,
   HiOutlineGlobe,
 } from "react-icons/hi";
 import { LuHelpingHand } from "react-icons/lu";

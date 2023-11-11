@@ -1,5 +1,5 @@
-import image from "../../assets/code.png";
-import htmt1c from "../../assets/articleimg/html1c.png"
+// import image from "../../assets/code.png";
+// import htmt1c from "../../assets/articleimg/html1c.png"
 import htmt1sec31 from "../../assets/articleimg/html1sec31.png"
 export const HtmlSemantics = {
   id: "html1",

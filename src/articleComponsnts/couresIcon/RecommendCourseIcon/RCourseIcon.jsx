@@ -1,8 +1,5 @@
 import React from "react";
 import "./RCourseIcon.css";
-import { GiHeartPlus } from "react-icons/gi";
-
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function RecommendCourseIcon({
@@ -10,16 +7,15 @@ function RecommendCourseIcon({
   des,
   title,
   name,
-  dp,
+
   link,
   date,
   duration,
 }) {
   const navigate = useNavigate();
- 
+
   return (
     <main className="icon-container2">
-    
       <section
         onClick={() => navigate(`/course?title=${encodeURIComponent(link)}`)}
         className="back-img"

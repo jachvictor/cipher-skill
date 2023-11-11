@@ -1,4 +1,4 @@
-import image from "../../assets/code.png";
+// import image from "../../assets/code.png";
 import vc1c from "../../assets/articleimg/vc1c.png";
 import author from "../../assets/authors/jachike.png";
 export const VersionControl = {

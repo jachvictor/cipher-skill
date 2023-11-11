@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../assets/logo.png";
 import "./Footer.css";
 import { Link } from "react-router-dom";
-import { BiSolidCopyright, BiCopyright } from "react-icons/bi";
+import { BiCopyright } from "react-icons/bi";
 
 function Footer() {
   return (

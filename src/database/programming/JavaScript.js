@@ -1,4 +1,4 @@
-import image from "../../assets/code.png";
+// import image from "../../assets/code.png";
 import js1c from "../../assets/articleimg/js1c.png";
 import author from "../../assets/authors/jachike.png";
 

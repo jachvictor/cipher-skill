@@ -1,6 +1,5 @@
 import { ReactJs } from "./programming/ReactJs";
 import { HtmlSemantics } from "./programming/Html";
-import React from "react";
 // import { ReactJs } from "./programming/ReactJs";
 import { VersionControl } from "./programming/VersionControl";
 import { Uml } from "./programming/Uml";

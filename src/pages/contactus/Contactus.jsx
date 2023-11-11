@@ -4,8 +4,6 @@ import { Input, Button, Label } from "../../components";
 import {
   BiLogoWhatsapp,
   BiPhone,
-  BiMessage,
-  BiSolidInbox,
   BiMailSend,
 } from "react-icons/bi";
 function Contactus() {

@@ -1,8 +1,7 @@
 import React from "react";
 import "./Cover.css";
-import img from "../../assets/codedef.png";
-import { BiArrowToTop, BiUpArrow } from "react-icons/bi";
-import { BiMoon, BiSolidMoon, BiSolidBookAdd } from "react-icons/bi";
+import { BiArrowToTop} from "react-icons/bi";
+import { BiMoon} from "react-icons/bi";
 import { BsFillBookmarkPlusFill } from "react-icons/bs";
 
 function ArticleCover({

@@ -50,13 +50,13 @@ function Terms() {
         <section className="terms-inf0">
           <h3>Terms of Service</h3>
           <article>
-            {terms.map((value) => {
+            {terms.map((value,index) => {
               return (
-                <div>
+                <div key={index}>
                   <h3>{value.head}</h3>
                   <section>
-                    {value.body.map((item) => {
-                      return <li>{item}</li>;
+                    {value.body.map((item,index) => {
+                      return <li key={index}>{item}</li>;
                     })}
                   </section>
                 </div>

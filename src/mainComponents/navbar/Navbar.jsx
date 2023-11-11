@@ -1,25 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 
-import PropTypes from "prop-types";
 import logo from "../../assets/logo.png";
-import Header from "../header/Header";
 import "./Navbar.css";
-import { Button, Input } from "../../components";
 import { useLocation } from "react-router-dom";
-import { AiOutlineHome } from "react-icons/ai";
-// import { IoHomeSharp } from "react-icons/io";
-import { ImHome, ImBooks } from "react-icons/im";
-import { MdFavorite, MdSearch } from "react-icons/md";
+import { ImBooks } from "react-icons/im";
+import { MdFavorite, MdPageview, MdSearch } from "react-icons/md";
 import { Link } from "react-router-dom";
 import SideNav from "../sideNav/SideNav";
 import { TiDelete } from "react-icons/ti";
+import { MdPages, MdError, MdContactPage } from "react-icons/md";
+import { BiBook } from "react-icons/bi";
 
 function Navbar(props) {
   const location = useLocation();
   const path = location.pathname;
   const [showmenu, setShowmenu] = useState(false);
-  const [show, setShow] = useState(1);
+  const [show, setShow] = useState(false);
+  const [currentPage, setCurrentPage] = useState();
   const [width, setWidth] = useState(window.innerWidth);
   const [checkWidth, setCheckWidth] = useState(2);
   // import { SelectHTMLAttributes } from "react";
@@ -43,49 +41,44 @@ function Navbar(props) {
       setCheckWidth(2);
     }
   });
-  const handleShow = () => {
-    if (
-      path === "/home" ||
-      path === "/fav" ||
-      path === "/contactUs" ||
-      path === "/search"
-    ) {
-      setShow(1);
-    } else if (path === "/python") {
-      setShow(2);
-    }
-
-    if (width > 900) {
-      setCheckWidth(1);
-    } else if (width < 900) {
-      setCheckWidth(2);
-    }
-  };
 
   useEffect(() => {
     // handleShow();
-  });
+    if (
+      path === "/contactus" ||
+      path === "/aboutus" ||
+      path === "/termsofservice"
+    ) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  }, [path]);
 
   const Icon = () => {
     return <IoMdMenu className="dropdown-icon" size={50} />;
   };
-  useEffect(() => {
-    const handler = (e) => setShowmenu(false);
-    window.addEventListener("click", handler);
-    return () => {
-      window.removeEventListener("click", handler);
-    };
-  });
+  // useEffect(() => {
+  //   const handler = (e) => setShowmenu(false);
+  //   window.addEventListener("click", handler);
+  //   return () => {
+  //     window.removeEventListener("click", handler);
+  //   };
+  // });
 
   const HandleIputClick = (e) => {
     e.stopPropagation();
-    setShowmenu(!showmenu);
+    setShowmenu(true);
+  };
+  const HandleIputClick2 = (e) => {
+    e.stopPropagation();
+    setShowmenu(false);
   };
   return (
     <div className="navbar-containe">
-      {width < 900 && <>{showmenu && <SideNav setCancel={setShowmenu} />}</>}
+      {width < 900 && <>{showmenu && <SideNav HandleIputClick2={HandleIputClick2} setCancel={setShowmenu} />}</>}
       <nav className="header">
-        <Link to={"/"}>
+        <Link onClick={()=>setShow(false)} to={"/"}>
           <img src={logo} alt="" className="navlogo" />
         </Link>
 
@@ -121,23 +114,32 @@ function Navbar(props) {
                 Favourite
               </p>
             </Link>
+            {show && (
+              <p style={{ color: "white" }} className="current">
+                <MdPages className="icon" color="white" size={30} />
+                {path === "/contactus" && "Contact us"}
+                {path === "/aboutus" && "About us"}
+                {path === "/termsofservice" && "Terms"}
+              </p>
+            )}
+
+            {path === "/course" && (
+              <p style={{ color: "white" }} className="current">
+                <BiBook className="icon" color={"white"} size={30} />
+                Course
+              </p>
+            )}
           </div>
         )}
 
         {width < 900 && (
-          <div
-            onClick={(e) => HandleIputClick(e)}
-            style={{ cursor: "pointer" }}
-            className="dropdown-tool"
-          >
-            {!showmenu && <Icon />}
-            {showmenu && (
-              <TiDelete
-                cursor="pointer"
-    
-                size={60}
-              />
+          <div style={{ cursor: "pointer" }} className="dropdown-tool">
+            {!showmenu && (
+              <div onClick={(e) => HandleIputClick(e)}>
+                <Icon />
+              </div>
             )}
+            {showmenu && <TiDelete  onClick={(e) => HandleIputClick2(e)} cursor="pointer" size={60} />}
           </div>
         )}
       </nav>

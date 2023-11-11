@@ -1,6 +1,5 @@
 import React from "react";
 import "./ArticleCat.css";
-import noauthor from "../../assets/articleimg/noauthor.png";
 import nocover from "../../assets/codedef.png";
 
 import HomeCourseIcon from "../../articleComponsnts/couresIcon/homeCourseIcon/HCourseIcon";

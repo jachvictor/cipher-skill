@@ -3,20 +3,14 @@ import React, { useState, useEffect } from "react";
 // import SideView from "../../articleComponsnts";
 // import SideBar from "../../articleComponsnts";
 // import SideBar from "../../articleComponsnts";
-import SideBar from "../../articleComponsnts/sideBar/SideBar";
 import { Carousell } from "../../mainComponents";
 import "./Homepage.css";
-import { ImList } from "react-icons/im";
 import {
-  BiNews,
   BiSolidNews,
   BiBarChart,
-  BiSolidNetworkChart,
   BiListCheck,
-  BiTrophy,
   BiSearch,
 } from "react-icons/bi";
-import image from "../../assets/codebackground.png";
 import { Button, Input } from "../../components";
 import { BiCheckSquare } from "react-icons/bi";
 // import { All, New, Recommend, Popular } from "../../articleComponsnts";

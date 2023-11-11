@@ -1,7 +1,5 @@
 // import { RecommendCourseIcon } from "../../couresIcon/Courseicon";
 import RecommendCourseIcon from "../../couresIcon/RecommendCourseIcon/RCourseIcon";
-import image from "../../../assets/codebackground2.png";
-import noauthor from "../../../assets/articleimg/noauthor.png";
 import nocover from "../../../assets/codedef.png";
 
 import "./Recommend.css";

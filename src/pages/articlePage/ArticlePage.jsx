@@ -14,17 +14,12 @@ import {
   ArticleNote,
   ArticleList,
 } from "../../articleContent";
-// import { Article } from "../../database";
 import { Article } from "../../database";
-import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { BiArrowToTop, BiUpArrow } from "react-icons/bi";
 import "./ArticlePage.css";
 
 function ArticlePage({ addToFavorite }) {
-  const index = 5 - 1;
   const [night, setNight] = useState(false);
-  const list = { lists: ["fff", "cddedde"] };
   const [data, setData] = useState([]);
 
   const location = useLocation();
@@ -39,15 +34,15 @@ function ArticlePage({ addToFavorite }) {
       item.content.title.includes(query)
     );
     setData(newData);
-  });
+  },[]);
 
   return (
     // <div>
     <div className="course">
       <>
-        {data.map((value) => {
+        {data.map((value,index) => {
           return (
-            <div>
+            <div key={index}>
               <ArticleCover
                 night={night}
                 setNight={setNight}
@@ -75,8 +70,8 @@ function ArticlePage({ addToFavorite }) {
                 night={night}
               />
 
-              {value.content.intro.list.map((items) => {
-                return <ArticleList night={night} item={items} />;
+              {value.content.intro.list.map((items,index) => {
+                return <ArticleList key={index} night={night} item={items} />;
               })}
 
               <ArticleNote
@@ -86,21 +81,23 @@ function ArticlePage({ addToFavorite }) {
               />
 
               <Table
+              key={index}
                 head={value.content.table.header}
                 list={value.content.table.list}
                 night={night}
               />
-              {value.content.sections.map((items) => {
+              {value.content.sections.map((items,index) => {
                 return (
-                  <div>
+                  <>
                     <Section
+                      key={index}
                       id={items.id}
                       header={items.header}
                       text={items.content}
                       night={night}
                     />
-                    {items.list.map((lists) => {
-                      return <ArticleList night={night} item={lists} />;
+                    {items.list.map((lists,index) => {
+                      return <ArticleList key={index} night={night} item={lists} />;
                     })}
                     <ArticleNote
                       night={night}
@@ -112,9 +109,10 @@ function ArticlePage({ addToFavorite }) {
                         night === true ? "flex-img" : " flex-img flex-light"
                       }
                     >
-                      {items.img.map((img) => {
+                      {items.img.map((img,index) => {
                         return (
                           <ArticleImg
+                          key={index}
                             night={night}
                             info={img.title}
                             image={img.link === null ? noimage : img.link}
@@ -122,17 +120,18 @@ function ArticlePage({ addToFavorite }) {
                         );
                       })}
                     </div>
-                    {items.subsection.map((items1) => {
+                    {items.subsection.map((items1,index) => {
                       return (
-                        <div>
+                        <>
                           <SubSection
+                          key={index}
                             header={items1.header}
                             night={night}
                             text={items1.content}
                           />
 
-                          {items1.list.map((lists) => {
-                            return <ArticleList night={night} item={lists} />;
+                          {items1.list.map((lists,index) => {
+                            return <ArticleList key={index} night={night} item={lists} />;
                           })}
                           <ArticleNote
                             night={night}
@@ -146,9 +145,10 @@ function ArticlePage({ addToFavorite }) {
                                 : " flex-img flex-light"
                             }
                           >
-                            {items1.img.map((items) => {
+                            {items1.img.map((items,index) => {
                               return (
                                 <ArticleImg
+                                key={index}
                                   night={night}
                                   info={items.title}
                                   image={
@@ -158,18 +158,19 @@ function ArticlePage({ addToFavorite }) {
                               );
                             })}
                           </div>
-                          {items1.innersection.map((items2) => {
+                          {items1.innersection.map((items2,index) => {
                             return (
-                              <div id="sec1">
+                              <>
                                 <InnerSection
+                                key={index}
                                   header={items2.header}
                                   night={night}
                                   text={items2.content}
                                 />
 
-                                {items2.list.map((lists) => {
+                                {items2.list.map((lists,index) => {
                                   return (
-                                    <ArticleList night={night} item={lists} />
+                                    <ArticleList key={index} night={night} item={lists} />
                                   );
                                 })}
                                 <ArticleNote
@@ -184,9 +185,10 @@ function ArticlePage({ addToFavorite }) {
                                       : " flex-img flex-light"
                                   }
                                 >
-                                  {items2.img.map((items) => {
+                                  {items2.img.map((items,index) => {
                                     return (
                                       <ArticleImg
+                                      key={index}
                                         night={night}
                                         info={items.title}
                                         image={
@@ -199,18 +201,20 @@ function ArticlePage({ addToFavorite }) {
                                   })}
                                 </div>
 
-                                {items2.subheader.map((items3) => {
+                                {items2.subheader.map((items3,index) => {
                                   return (
-                                    <div id="sec1">
+                                    <>
                                       <SubHeader
+                                      key={index}
                                         header={items3.header}
                                         night={night}
                                         text={items3.content}
                                       />
 
-                                      {items3.list.map((lists) => {
+                                      {items3.list.map((lists,index) => {
                                         return (
                                           <ArticleList
+                                          key={index}
                                             night={night}
                                             item={lists}
                                           />
@@ -228,9 +232,10 @@ function ArticlePage({ addToFavorite }) {
                                             : " flex-img flex-light"
                                         }
                                       >
-                                        {items3.img.map((img) => {
+                                        {items3.img.map((img,index) => {
                                           return (
                                             <ArticleImg
+                                            key={index}
                                               night={night}
                                               info={img.title}
                                               image={
@@ -242,16 +247,16 @@ function ArticlePage({ addToFavorite }) {
                                           );
                                         })}
                                       </div>
-                                    </div>
+                                    </>
                                   );
                                 })}
-                              </div>
+                              </>
                             );
                           })}
-                        </div>
+                        </>
                       );
                     })}
-                  </div>
+                  </>
                 );
               })}
             </div>

@@ -3,12 +3,8 @@ import { useState } from "react";
 // import viteLogo from "/vite.svg";
 import "./App.css";
 import { useLocation, useNavigate } from "react-router-dom";
-import { LandingPage } from "./pages";
 import { ImArrowLeft, ImArrowRight } from "react-icons/im";
-import { Footer, Navbar } from "./mainComponents";
 import Pageroute from "./routes/Pageroute";
-import Courseroute from "./routes/Courseroute";
-import Activityroute from "./routes/Activityroute";
 
 function App() {
   const navigate = useNavigate();

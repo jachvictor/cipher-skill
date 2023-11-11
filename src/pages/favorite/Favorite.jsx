@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Favorite.css";
 import { Article } from "../../database";
-import { AiTwotoneCloseSquare } from "react-icons/ai";
 import { Confirm } from "../../mainComponents";
-import { TiDelete } from "react-icons/ti";
 import { AiOutlineDelete } from "react-icons/ai";
 import { GiEmptyMetalBucketHandle } from "react-icons/gi";
-import img from "../../assets/homeback.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import noauthor from "../../../assets/articleimg/noauthor.png"
 import nocover from "../../assets/codedef.png";
 
 import { Link } from "react-router-dom";
@@ -34,7 +30,6 @@ function Favorite({ favorites, setFavorites }) {
 
   const handleConfirmDelete = () => {
     if (itemToDelete) {
-      // Filter out the article to remove it from favorites
       const updatedFavorites = favorites.filter((fav) => fav !== itemToDelete);
       setFavorites(updatedFavorites);
       toast.success("removed successfully");

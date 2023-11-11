@@ -1,6 +1,4 @@
 import React from "react";
-import Courseicon from "../couresIcon/Courseicon";
-import image from "../../../assets/codebackground.png";
 
 import Recommend from "../analogous/recommended/Recommend";
 import "./SideView.css";

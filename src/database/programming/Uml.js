@@ -1,4 +1,4 @@
-import image from "../../assets/code.png";
+// import image from "../../assets/code.png";
 import uml1c from "../../assets/articleimg/uml1c.png";
 import uml1sec31 from "../../assets/articleimg/uml1sec31.png";
 import uml1sec32 from "../../assets/articleimg/uml1sec32.png";

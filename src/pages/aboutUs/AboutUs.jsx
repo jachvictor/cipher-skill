@@ -41,7 +41,7 @@ function AboutUs() {
     },
   ];
   const result1 = aboutUs.filter((value) => value.id < 4);
-  const result2 = aboutUs.filter((value) => value.id == 4);
+  const result2 = aboutUs.filter((value) => value.id === 4);
   const devs = [
     {
       name: "Nnaemaka Charles",

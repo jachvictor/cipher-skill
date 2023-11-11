@@ -11,9 +11,7 @@ import {
   ErrorPage,
   Terms,
 } from "../pages";
-import Activityroute from "./Activityroute";
-import { Navbar, Header, Footer } from "../mainComponents";
-// import { Python } from "../courses";
+import { Navbar, Footer } from "../mainComponents";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";

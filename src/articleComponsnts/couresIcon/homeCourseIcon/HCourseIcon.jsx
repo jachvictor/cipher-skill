@@ -1,10 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import "./HCourseIcon.css";
-import { GiHeartPlus,GiLoveHowl, GiHeartShield } from "react-icons/gi";
-import {BiBookHeart} from "react-icons/bi"
+import { BiBookHeart } from "react-icons/bi";
 import { Button } from "../../../components";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function HomeCourseIcon({
@@ -13,7 +11,6 @@ function HomeCourseIcon({
   title,
   name,
   dp,
-  link,
   searchtitle,
   date,
   onClick,
@@ -68,15 +65,19 @@ function HomeCourseIcon({
         </div>
       </section>
       <section className="feature">
-        <BiBookHeart cursor={"pointer"} size={40} color="silver" onClick={() => onClick()} />
-        {/* <Link to={link}> */}
-        <Button
+        <BiBookHeart
+          cursor={"pointer"}
+          size={40}
+          color="silver"
+          onClick={() => onClick()}
+        />
+        <button
+          className="disturb"
           onClick={() =>
             navigate(`/course?title=${encodeURIComponent(searchtitle)}`)
           }
-          text={"read"}
-        />
-        {/* </Link> */}
+          // text={"read"}
+        >read</button>
       </section>
     </div>
   );

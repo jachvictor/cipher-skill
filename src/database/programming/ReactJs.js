@@ -1,4 +1,4 @@
-import image from "../../assets/code.png";
+// import image from "../../assets/code.png";
 import react1c from "../../assets/articleimg/react1c.png"
 import author from "../../assets/authors/jachike.png"
 export const ReactJs = {

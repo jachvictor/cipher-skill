@@ -1,8 +1,7 @@
 import React from "react";
 import "./Info.css";
-import { Children } from "react";
 
-function Info({ link, text, header, Children }) {
+function Info({  text, header, Children }) {
   return (
     <div className="contain">
       <div className="design">
@@ -21,7 +20,7 @@ function Info({ link, text, header, Children }) {
 
 export default Info;
 
-export function Info2({ link, text, header, Children }) {
+export function Info2({ text, header, Children }) {
   return (
     <div className="contain">
       <div className="design">

@@ -1,15 +1,12 @@
 import React from "react";
-import { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import "./Carousel.css";
-import image from "../../assets/new.png";
 import img1 from "../../assets/patience.png";
 import img2 from "../../assets/perspective.png";
 import img3 from "../../assets/logical.png";
 import img4 from "../../assets/creative.png";
 import img5 from "../../assets/learning.png";
-import { Button } from "../../components";
 function Carousell() {
   const homeimages = [
     {
@@ -43,8 +40,6 @@ function Carousell() {
       text: "In coding, you face a lot of problems where you need help from other resources",
     },
   ];
-  const [handleindex, setHandleindex] = useState();
-  //   setHandleindex(index);
   return (
     <div>
       {/* <div className="margin"></div> */}
@@ -54,17 +49,13 @@ function Carousell() {
           autoPlay={true}
           infiniteLoop={true}
           stopOnHover={false}
-          // swipeable={true}
-          // transitionTime={10}
           swipeable={true}
-          selectedItem={homeimages[handleindex]}
-          onChange={handleindex}
           showThumbs={false}
           className="carousel-container"
         >
           {homeimages.map((value, index) => {
             return (
-              <div className="hold-c-img">
+              <div key={index} className="hold-c-img">
                 <div
                   className="c-img"
                   style={{

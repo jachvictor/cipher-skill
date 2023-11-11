@@ -2,12 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./SearchPage.css";
 import { Input, Button } from "../../components";
 
-import DevProfile from "../../mainComponents/devProfile/DevProfile";
-import img from "../../assets/code.png";
-import noResult from "../../assets/no-result.png";
 import { ArticleCat } from "../../mainComponents";
 import { Article } from "../../database";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate} from "react-router-dom";
 import Category from "../../mainComponents/categories/Category";
 import { BiSearch } from "react-icons/bi";
 import { TbMoodEmpty } from "react-icons/tb";
@@ -15,7 +12,6 @@ function SearchPage({ addToFavorite }) {
   const [search, setSearch] = useState();
   const [display, setDisplay] = useState();
   const [data, setData] = useState([]);
-  const [holdQuery, setHoldQuery] = useState(0);
   const [width, setWidth] = useState(window.innerWidth);
 
   const [showAll, setShowAll] = useState(false);
