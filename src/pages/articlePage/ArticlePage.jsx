@@ -34,13 +34,13 @@ function ArticlePage({ addToFavorite }) {
       item.content.title.includes(query)
     );
     setData(newData);
-  },[]);
+  }, []);
 
   return (
     // <div>
     <div className="course">
       <>
-        {data.map((value,index) => {
+        {data.map((value, index) => {
           return (
             <div key={index}>
               <ArticleCover
@@ -65,28 +65,30 @@ function ArticlePage({ addToFavorite }) {
               />
 
               <Section
+                key={index}
                 header={value.content.intro.header}
                 text={value.content.intro.content}
                 night={night}
               />
 
-              {value.content.intro.list.map((items,index) => {
+              {value.content.intro.list.map((items, index) => {
                 return <ArticleList key={index} night={night} item={items} />;
               })}
 
               <ArticleNote
+                key={index}
                 night={night}
                 header={value.content.intro.note.header}
                 text={value.content.intro.note.text}
               />
 
               <Table
-              key={index}
+                key={index}
                 head={value.content.table.header}
                 list={value.content.table.list}
                 night={night}
               />
-              {value.content.sections.map((items,index) => {
+              {value.content.sections.map((items, index) => {
                 return (
                   <>
                     <Section
@@ -96,23 +98,27 @@ function ArticlePage({ addToFavorite }) {
                       text={items.content}
                       night={night}
                     />
-                    {items.list.map((lists,index) => {
-                      return <ArticleList key={index} night={night} item={lists} />;
+                    {items.list.map((lists, index) => {
+                      return (
+                        <ArticleList key={index} night={night} item={lists} />
+                      );
                     })}
                     <ArticleNote
+                      key={index}
                       night={night}
                       header={items.note.header}
                       text={items.note.text}
                     />
                     <div
+                      key={index}
                       className={
                         night === true ? "flex-img" : " flex-img flex-light"
                       }
                     >
-                      {items.img.map((img,index) => {
+                      {items.img.map((img, index) => {
                         return (
                           <ArticleImg
-                          key={index}
+                            key={index}
                             night={night}
                             info={img.title}
                             image={img.link === null ? noimage : img.link}
@@ -120,35 +126,44 @@ function ArticlePage({ addToFavorite }) {
                         );
                       })}
                     </div>
-                    {items.subsection.map((items1,index) => {
+                    {items.subsection.map((items1, index) => {
                       return (
                         <>
                           <SubSection
-                          key={index}
+                            key={index}
                             header={items1.header}
                             night={night}
                             text={items1.content}
                           />
 
-                          {items1.list.map((lists,index) => {
-                            return <ArticleList key={index} night={night} item={lists} />;
+                          {items1.list.map((lists, index) => {
+                            return (
+                              <ArticleList
+
+                                key={index}
+                                night={night}
+                                item={lists}
+                              />
+                            );
                           })}
                           <ArticleNote
+                          key={index}
                             night={night}
                             header={items1.note.header}
                             text={items1.note.text}
                           />
                           <div
+                          key={index}
                             className={
                               night === true
                                 ? "flex-img"
                                 : " flex-img flex-light"
                             }
                           >
-                            {items1.img.map((items,index) => {
+                            {items1.img.map((items, index) => {
                               return (
                                 <ArticleImg
-                                key={index}
+                                  key={index}
                                   night={night}
                                   info={items.title}
                                   image={
@@ -158,37 +173,43 @@ function ArticlePage({ addToFavorite }) {
                               );
                             })}
                           </div>
-                          {items1.innersection.map((items2,index) => {
+                          {items1.innersection.map((items2, index) => {
                             return (
                               <>
                                 <InnerSection
-                                key={index}
+                                  key={index}
                                   header={items2.header}
                                   night={night}
                                   text={items2.content}
                                 />
 
-                                {items2.list.map((lists,index) => {
+                                {items2.list.map((lists, index) => {
                                   return (
-                                    <ArticleList key={index} night={night} item={lists} />
+                                    <ArticleList
+                                      key={index}
+                                      night={night}
+                                      item={lists}
+                                    />
                                   );
                                 })}
                                 <ArticleNote
+                                key={index}
                                   night={night}
                                   header={items2.note.header}
                                   text={items2.note.text}
                                 />
                                 <div
+                                key={index}
                                   className={
                                     night === true
                                       ? "flex-img"
                                       : " flex-img flex-light"
                                   }
                                 >
-                                  {items2.img.map((items,index) => {
+                                  {items2.img.map((items, index) => {
                                     return (
                                       <ArticleImg
-                                      key={index}
+                                        key={index}
                                         night={night}
                                         info={items.title}
                                         image={
@@ -201,31 +222,33 @@ function ArticlePage({ addToFavorite }) {
                                   })}
                                 </div>
 
-                                {items2.subheader.map((items3,index) => {
+                                {items2.subheader.map((items3, index) => {
                                   return (
                                     <>
                                       <SubHeader
-                                      key={index}
+                                        key={index}
                                         header={items3.header}
                                         night={night}
                                         text={items3.content}
                                       />
 
-                                      {items3.list.map((lists,index) => {
+                                      {items3.list.map((lists, index) => {
                                         return (
                                           <ArticleList
-                                          key={index}
+                                            key={index}
                                             night={night}
                                             item={lists}
                                           />
                                         );
                                       })}
                                       <ArticleNote
+                                      key={index}
                                         night={night}
                                         header={items3.note.header}
                                         text={items3.note.text}
                                       />
                                       <div
+                                      key={index}
                                         className={
                                           night === true
                                             ? "flex-img"
@@ -235,7 +258,7 @@ function ArticlePage({ addToFavorite }) {
                                         {items3.img.map((img,index) => {
                                           return (
                                             <ArticleImg
-                                            key={index}
+                                              key={index}
                                               night={night}
                                               info={img.title}
                                               image={

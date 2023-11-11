@@ -26,7 +26,7 @@ function ArticleCat({ data, onClick }) {
       </>
     );
   });
-  const v = [holdValues];
+  
   return (
     <div className="article-cat">
       <section className="hold-result">{holdValues}</section>

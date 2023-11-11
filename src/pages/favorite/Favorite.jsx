@@ -64,9 +64,9 @@ function Favorite({ favorites, setFavorites }) {
       )}
 
       <div className="fav-list">
-        {favoriteArt.map((item) => {
+        {favoriteArt.map((item,index) => {
           return (
-            <div className="fav-card">
+            <div key={index} className="fav-card">
               {/* <section> */}
               <Link
                 className="hold-fav-img"
