@@ -42,7 +42,7 @@ function Footer() {
 
           <p className="copyright">
             <BiCopyright />
-            Copyright 2023 Cipherskill. All Rights Reserved
+            Copyright 2023 CipherSkill. All Rights Reserved
           </p>
         </ul>
       </section>

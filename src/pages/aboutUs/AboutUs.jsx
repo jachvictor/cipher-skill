@@ -10,8 +10,8 @@ function AboutUs() {
   const aboutUs = [
     {
       id: 1,
-      head: "About Cipherskill",
-      body: "At Cipher skill, we are more than just a coding blog. We are a vibrant community of passionate tech enthusiasts dedicated to fostering innovation and learning in the world of programming.",
+      head: "About CipherSkill",
+      body: "At CipherSkill, we are more than just a coding blog. We are a vibrant community of passionate tech enthusiasts dedicated to fostering innovation and learning in the world of programming.",
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ function AboutUs() {
     {
       id: 4,
       head: "Join Our Vision",
-      body: "At Cipherskill, we aim to groom the techies of the future. Our vision is to inspire and guide upcoming developers, helping them reach their full potential and make a lasting impact on the tech world.",
+      body: "At CipherSkill, we aim to groom the techies of the future. Our vision is to inspire and guide upcoming developers, helping them reach their full potential and make a lasting impact on the tech world.",
     },
   ];
   const unique = [

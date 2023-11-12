@@ -40,7 +40,7 @@ function LandingPage() {
           }
           link={us}
           header={"Who we are"}
-          text="The Cipherskill Community is an innovation and learning platform dedicated to empowering  tech enthusiasts with the latest and most relevant resources. Our mission is to equip our users with the essential and up-to-date skills needed to excel in today's tech-driven society. We aspire to nurture and elevate upcoming developers, helping them reach their full potential and contributing to the growth of the tech community."
+          text="The CipherSkill Community is an innovation and learning platform dedicated to empowering  tech enthusiasts with the latest and most relevant resources. Our mission is to equip our users with the essential and up-to-date skills needed to excel in today's tech-driven society. We aspire to nurture and elevate upcoming developers, helping them reach their full potential and contributing to the growth of the tech community."
         >
           {/* <HiOutlineGlobe /> */}
         </Info>
@@ -88,7 +88,7 @@ function LandingPage() {
       <div className="wrap">
         <section className="start-now">
           <h2 className="start-qoute">
-            are you ready to solve world problems with programming methodologies
+            Are you ready to solve world problems with programming methodologies
             and algorithms
           </h2>
           <Link to={"/home"}>
