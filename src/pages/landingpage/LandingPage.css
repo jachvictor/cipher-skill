@@ -212,16 +212,12 @@
 }
 @media screen and (max-width: 500px) {
   .hold-land-icon {
-    font-size: 15rem;
+    font-size: 14rem;
   }
 }
 @media screen and (max-width: 400px) {
   .hold-land-icon {
-    font-size: 10rem;
+    font-size: 8rem;
   }
 }
-@media screen and (max-width: 900px) {
-  .hold-land-icon {
-    font-size: 16rem;
-  }
-}
+
