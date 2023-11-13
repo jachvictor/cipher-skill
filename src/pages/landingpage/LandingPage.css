@@ -62,6 +62,9 @@
   font-weight: 500;
   color: silver;
 }
+.hold-intro button{
+  margin-top: 1rem;
+}
 
 .hold-article {
   background: linear-gradient(
@@ -137,7 +140,7 @@
   color: silver;
   /* background-color: aqua; */
   /* filter: drop-shadow(0 0 2em #646cffaa); */
-  font-size: 30rem;
+  font-size: 20rem;
   /* height: 12rem; */
 }
 .land-icon {
@@ -215,5 +218,10 @@
 @media screen and (max-width: 400px) {
   .hold-land-icon {
     font-size: 10rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .hold-land-icon {
+    font-size: 16rem;
   }
 }

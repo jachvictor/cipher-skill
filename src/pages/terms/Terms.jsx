@@ -6,7 +6,7 @@ function Terms() {
   const terms = [
     {
       head: "1. Acceptance of Terms",
-      body: ["By accessing and using Codeable, you agree to comply with and be bound by these Terms of Service."],
+      body: ["By accessing and using CipherSkill, you agree to comply with and be bound by these Terms of Service."],
     },
     {
       head: "2. User Conduct",
@@ -21,7 +21,7 @@ function Terms() {
       body: [
         "a. The courses provided on the Platform are for educational purposes only.",
 
-        "b. You may not reproduce, distribute, or modify the course content without the explicit consent of [Your Company Name].",
+        "b. You may not reproduce, distribute, or modify the course content without the explicit consent of CipherSkill.",
       ],
     },
     {

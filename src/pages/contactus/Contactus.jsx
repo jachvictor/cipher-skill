@@ -25,7 +25,7 @@ function Contactus() {
               <BiPhone />: 07018647050
             </p>
             <p>
-              <BiMailSend />: chukwujachike@gmail.com
+              <BiMailSend />: chukwujachike175@gmail.com
             </p>
           </div>
         </section>

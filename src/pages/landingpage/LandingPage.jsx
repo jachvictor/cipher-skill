@@ -27,7 +27,7 @@ function LandingPage() {
             nurturing and advancing your skills as a programmer.
           </p>
           <Link to={"/home"}>
-            <button className="start"> Get started</button>
+            <button className="start"> Get Started</button>
           </Link>
         </div>
       </section>
@@ -39,7 +39,7 @@ function LandingPage() {
             </div>
           }
           link={us}
-          header={"Who we are"}
+          header={"Who We Are"}
           text="The CipherSkill Community is an innovation and learning platform dedicated to empowering  tech enthusiasts with the latest and most relevant resources. Our mission is to equip our users with the essential and up-to-date skills needed to excel in today's tech-driven society. We aspire to nurture and elevate upcoming developers, helping them reach their full potential and contributing to the growth of the tech community."
         >
           {/* <HiOutlineGlobe /> */}
@@ -51,7 +51,7 @@ function LandingPage() {
               <HiOutlineGlobe className="land-icon icon-rotate" />
             </div>
           }
-          header={"we serve the society"}
+          header={"We Serve The Society"}
           link={serve}
           text="
             All our courses are free of charge ensuring that cost is never a barrier to education, making quality programming education accessible to everyone.
@@ -65,7 +65,7 @@ function LandingPage() {
               <LuHelpingHand className="land-icon up-down1" />
             </div>
           }
-          header={"What we offer"}
+          header={"What We Offer"}
           link={offer}
           text={
             <div className="offer-list">
@@ -92,7 +92,7 @@ function LandingPage() {
             and algorithms
           </h2>
           <Link to={"/home"}>
-            <button className="start"> join us now</button>
+            <button className="start"> Join Us Now</button>
           </Link>
         </section>
       </div>

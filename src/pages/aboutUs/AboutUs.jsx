@@ -29,11 +29,11 @@ function AboutUs() {
   const unique = [
     {
       head: "Learning Hub:",
-      body: " We provide a one-stop hub for tech enthusiasts, whether you're a beginner ",
+      body: " We provide a one-stop hub for tech enthusiasts, whether you're a beginner. ",
     },
     {
       head: "Community Focus:",
-      body: " We believe in the strength of a thriving community. Connect with like-",
+      body: " We believe in the strength of a thriving community.A network of like-minded people.",
     },
     {
       head: "Staying Current:",
@@ -45,11 +45,11 @@ function AboutUs() {
   const devs = [
     {
       name: "Nnaemaka Charles",
-      role: "Qaulity assurance software engineer",
+      role: "Qaulity Assurance Software Engineer",
       img: emeka,
     },
-    { name: "Ike Tobenna", role: "Software engineer", img: tobby },
-    { name: "Chukwu Jachike", role: "Frontend developer", img: victor },
+    { name: "Ike Tobenna", role: "Software Engineer", img: tobby },
+    { name: "Chukwu Jachike", role: "Frontend Developer", img: victor },
   ];
   return (
     <div className="about-us">

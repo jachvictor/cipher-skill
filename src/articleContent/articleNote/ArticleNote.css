@@ -24,18 +24,24 @@
   padding: 1rem;
   width: auto;
   /* margin-left: 1rem; */
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
 }
 .dark-mode {
-  gap: 2rem;
+  display: flex;
+  /* gap: 2rem; */
   display: flex;
   padding: 0 1rem;
   align-items: center;
   color: white;
   /* background-color: #3f3f3f; */
 }
-@media screen and (max-width:500px) {
-  .note-contain{
+@media screen and (max-width: 500px) {
+  .note-contain {
+    display: flex;
+    flex-direction: column;
+  }
+  .dark-mode {
+    display: flex;
     flex-direction: column;
   }
 }

@@ -3,11 +3,27 @@ import logo from "../../assets/logo.png";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { IoMdArrowDropdown } from "react-icons/io";
 function Header() {
   const [width, setWidth] = useState(window.innerWidth);
   const [select, setSelect] = useState();
+  const [showmenu, setShowmenu] = useState(true);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const handler = (e) => setShowmenu(false);
+    window.addEventListener("click", handler);
+    return () => {
+      window.removeEventListener("click", handler);
+    };
+  });
+
+  const HandleIputClick = (e) => {
+    e.stopPropagation();
+    setShowmenu(!showmenu);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,11 +45,9 @@ function Header() {
     if (select === "/contactus") {
       // Redirect to Page 1
       navigate("/contactus");
-      
     } else if (select === "/aboutus") {
-      
       navigate("/aboutus");
-    }else if (select==="/home") {
+    } else if (select === "/home") {
       navigate("/home");
     }
 
@@ -61,30 +75,41 @@ function Header() {
                 <p>Contact Us</p>
               </Link>
               <Link to={"/home"}>
-                <button className="start">get started</button>
+                <button className="start">Get Started</button>
               </Link>{" "}
             </>
           )}
         </div>
         {width < 900 && (
-          <select
-            className="select-route"
-            value={select}
-            onChange={handleNavigate}
-          >
-            <option value="">
-              <p>Select</p>
-            </option>
-            <option value="/home">
-              <p>Get Started</p>
-            </option>
-            <option value="/aboutus">
-              <p>About Us</p>
-            </option>
-            <option value="/contactus">
-              <p>Contact Us</p>
-            </option>
-          </select>
+          <div className="dropdown-input">
+            <div
+              style={{ cursor: "pointer", color: "black" }}
+              className="select-route"
+            >
+              <p onClick={() => navigate("/home")}>Get Started</p>
+              <IoMdArrowDropdown
+                onClick={HandleIputClick}
+                className="arrow-down"
+                size={30}
+                color="black"
+              />
+            </div>
+
+            {showmenu && (
+              <div className="hold-nav-item">
+                {/* {searchQuery2.map((items) => {
+                return ( */}
+                <p onClick={() => navigate("/aboutus")} className="nav-item">
+                  About Us
+                </p>
+                <p onClick={() => navigate("/contactus")} className="nav-item">
+                  Contact Us
+                </p>
+                {/* );
+              })} */}
+              </div>
+            )}
+          </div>
         )}
         {/* </section> */}
       </nav>

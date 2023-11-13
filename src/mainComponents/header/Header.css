@@ -59,22 +59,48 @@
   justify-content: space-between;
   color:#03032c ;
 }
+.extra p:hover{
+color: aqua;
+}
 .start:hover {
   background-color: rgb(0, 128, 4);
   color: white;
   border: 1px solid white;
 }
 .select-route{
-  padding: 0.5rem 0.1rem;
-  font-size: large;
+  display: flex;
+  align-items: center;
+  width: auto;
+  gap: 1rem;
+  padding:0.5rem;
+  font-size: small;
   font-weight: 600;
   border: 1px solid aqua;
   transition: 2s;
 }
-.select-route option:hover{
-  padding: 1rem;
-  background-color: green;
+.select-route p{
+  border: 1px solid white;
+  padding: 0.5rem;
   color: white;
+  border-radius: 0.3rem;
+  background-color: green;
+}
+
+.arrow-down{
+  border: 1px solid black;
+}
+.hold-nav-item{
+  position: absolute;
+  color: black;
+}
+.hold-nav-item p{
+display: flex;
+align-items: center;
+border: 1px solid black;
+padding:0.5rem 1rem;
+width: 7rem;
+background-color: white;
+
 }
 @media (max-width: 900px) {
   .navbar {
