@@ -9,7 +9,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 function Header() {
   const [width, setWidth] = useState(window.innerWidth);
   const [select, setSelect] = useState();
-  const [showmenu, setShowmenu] = useState(true);
+  const [showmenu, setShowmenu] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
